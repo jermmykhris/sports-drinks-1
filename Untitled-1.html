@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Hydration Drink - Online Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f8ff;
+    }
+    h1 {
+      color: #0073e6;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    fieldset {
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .inline {
+      display: inline-block;
+      width: auto;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sports Hydration Drink Registration Form -->
+  <h1>Sports Hydration Drink Registration</h1>
+  <form action="/serverlogic" method="post">
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autofocus maxlength="50">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="e.g., name@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Create Password:</label>
+        <input type="password" id="password" name="password" placeholder="Choose a strong password" required minlength="6">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g., 9876543210" required pattern="[0-9]{10}">
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Drink Preferences</legend>
+
+      <div class="form-group">
+        <label for="flavor">Favorite Flavor:</label>
+        <select id="flavor" name="flavor" required>
+          <option value="">Select your flavor</option>
+          <option value="lemon">Lemon</option>
+          <option value="orange">Orange</option>
+          <option value="berry">Berry</option>
+          <option value="mango">Mango</option>
+          <option value="mint">Mint</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Preferred Drink Type:</label>
+        <input type="radio" id="energy" name="drinktype" value="Energy" required>
+        <label for="energy" class="inline">Energy</label>
+        <input type="radio" id="electrolyte" name="drinktype" value="Electrolyte" required>
+        <label for="electrolyte" class="inline">Electrolyte</label>
+      </div>
+
+      <div class="form-group">
+        <label>Why do you choose our drink?</label>
+        <input type="checkbox" id="hydration" name="reason1" value="Hydration">
+        <label for="hydration" class="inline">Hydration</label>
+        <input type="checkbox" id="taste" name="reason2" value="Taste">
+        <label for="taste" class="inline">Taste</label>
+        <input type="checkbox" id="energyboost" name="reason3" value="Energy Boost">
+        <label for="energyboost" class="inline">Energy Boost</label>
+        <input type="checkbox" id="recovery" name="reason4" value="Recovery">
+        <label for="recovery" class="inline">Recovery</label>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Number of bottles per week:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="50" required>
+      </div>
+
+      <div class="form-group">
+        <label for="website">Your Website (if any):</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="search">Search Our Products:</label>
+        <input type="search" id="search" name="search" placeholder="Search for drinks">
+      </div>
+
+      <div class="form-group">
+        <label for="fileupload">Upload Your Fitness Certificate:</label>
+        <input type="file" id="fileupload" name="fileupload" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Feedback</legend>
+      <div class="form-group">
+        <label for="feedback">Your Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" placeholder="Tell us about your experience..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Hydration Level Tracker:</label>
+        <progress value="70" max="100"></progress>
+      </div>
+    </fieldset>
+
+    <div class="form-group">
+      <input type="submit" value="Register">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+</body>
+</html>
